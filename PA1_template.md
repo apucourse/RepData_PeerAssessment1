@@ -66,7 +66,8 @@ plot_hist <- ggplot(data=mydata_day,
   ggtitle("Histogram of total steps per day\nexcluding missing values") +
   ylim(c(0,15))
 
-print(plot_hist)
+#print(plot_hist)
+plot_hist
 ```
 
 ![](PA1_template_files/figure-html/steps-1.png)<!-- -->

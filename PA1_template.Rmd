@@ -59,8 +59,8 @@ plot_hist <- ggplot(data=mydata_day,
   ggtitle("Histogram of total steps per day\nexcluding missing values") +
   ylim(c(0,15))
 
-print(plot_hist)
-
+#print(plot_hist)
+plot_hist
 ```
 
 3. Calculate and report the mean and median of the total number of steps taken per day
