@@ -1,8 +1,8 @@
 ---
 title: "Reproducible Research: Peer Assessment 1"
 output: 
-  html_document:
-    keep_md: true
+  html_document: 
+    keep_md: yes
 ---
 
 ## Loading and preprocessing the data
@@ -66,8 +66,7 @@ plot_hist <- ggplot(data=mydata_day,
   ggtitle("Histogram of total steps per day\nexcluding missing values") +
   ylim(c(0,15))
 
-#print(plot_hist)
-plot_hist
+print(plot_hist)
 ```
 
 ![](PA1_template_files/figure-html/steps-1.png)<!-- -->
@@ -242,16 +241,3 @@ print(plot_dayofweek)
 ![](PA1_template_files/figure-html/days-1.png)<!-- -->
 
 On weekdays, there is more activity (more steps) in the early morning than on weekends. On weekends, there is slightly more activity through the day than on weekdays.
-
-Save plots to figures folder.
-
-```r
-#save plots
-plots <- list(plot_time=plot_time,plot_hist=plot_hist,imputed_plot_hist=imputed_plot_hist,plot_dayofweek=plot_dayofweek)
-
-for (i in 1:length(plots)) {
-  png(paste0("figure/",names(plots)[i],".png"))
-    print(plots[[i]])
-  dev.off()
-}
-```
